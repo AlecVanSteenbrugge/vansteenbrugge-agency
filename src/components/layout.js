@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { 
-  container, 
-  nav, 
-  navLinks, 
-  navLinkItem, 
-  navLinkText, 
-  siteTitle ,
+import {
+  container,
+  nav,
+  navLinks,
+  navLinkItem,
+  navLinkText,
+  siteTitle,
   main
 } from './layout.module.css'
 
@@ -29,8 +29,8 @@ const Layout = ({ pageTitle, children }) => {
           <h1>{data.site.siteMetadata.title}</h1>
         </header>
         <ul className={navLinks}>
-        <li>
-        </li>
+          <li>
+          </li>
           <li className={navLinkItem}>
             <Link className={navLinkText} to="/">
               Home
@@ -39,6 +39,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link className={navLinkText} to="/about">
               About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/artists">
+              Artists
             </Link>
           </li>
         </ul>
